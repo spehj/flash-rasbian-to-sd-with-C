@@ -33,25 +33,36 @@ sync
 
 Process should take a while.
 <br>
+<br>
 
-Some useful commands when working with Raspberry:
-
-Get image from the RPi:
-
-```console
-scp pi@192.168.1.166:image.jpg /home/spehj/Desktop/
-```
+##Some useful commands when working with Raspberry:
+We can take a picture with the same program we've used for copying .img file to SD.
 
 Copy main.c to the RPi:
 ```console
 scp main.c pi@192.168.1.166:/home/pi
 ```
 
-
 Compile a C file on the RPi using gcc:
 ```console
-gcc main.c -Wall -o opt
+pi@raspberrypi:~$ gcc main.c -Wall -o opt
 ```
+
+Take an image from video0 (RPi camera) and save it in home folder.
+```console
+pi@raspberrypi:~$  ./copy /dev/video0 image.jpg
+```
+
+Get image from the RPi to your PC. Run 
+
+```console
+scp pi@192.168.1.166:image.jpg /home/spehj/Desktop/
+```
+
+
+
+
+
 
 
 

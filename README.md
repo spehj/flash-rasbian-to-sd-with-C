@@ -1,10 +1,20 @@
 # Flash Raspbian image to the SD card using C programming language
 A short C program to copy raspbian image file to the sd card.
 
+First make sure which drive is your SD card. In my case it was /dev/sda. You can use one of these commands:
+```console
+ls -l /dev/sda*
+lsblk -p
+sudo fdisk -l
+/dev/sda
+```
+
 first compile main.c
 ```console
 make
 ```
+
+Before you try to copy .img file to SD card, make sure your SD card is formatted properly and has only one partition.
 
 Run the compiled file as:
 ```console
@@ -15,8 +25,6 @@ Example:
 ```console
 ./copy raspbian.img /dev/sda
 ```
-
-Make sure your SD card is formatted properly.
 
 Use sync command afterwards.
 ```console

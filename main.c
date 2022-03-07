@@ -81,8 +81,3 @@ int main(int argc, char *argv[])
     }
     exit(0);
 }
-
-// ls -l /dev/sda*
-// lsblk -p
-// sudo fdisk -l
-// /dev/sda
